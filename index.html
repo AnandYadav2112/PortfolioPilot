@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortfolioPilot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>PortfolioPilot</h1>
+      <p>AI-powered Product Portfolio Intelligence Platform</p>
+    </div>
+    <div class="badge">CPO Command Center</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" id="progress-panel">
+      <div class="panel-header">
+        <h2>Unified Product Progress View</h2>
+        <span id="portfolio-health" class="pill"></span>
+      </div>
+      <div id="progress-grid" class="progress-grid"></div>
+    </section>
+
+    <section class="panel" id="capacity-panel">
+      <div class="panel-header">
+        <h2>Skill-Based Capacity Intelligence</h2>
+      </div>
+      <div id="capacity-table"></div>
+    </section>
+
+    <section class="panel" id="ai-panel">
+      <div class="panel-header">
+        <h2>AI-Driven Recommendations</h2>
+      </div>
+      <ul id="recommendations" class="recommendations"></ul>
+    </section>
+
+    <section class="panel" id="sim-panel">
+      <div class="panel-header">
+        <h2>What-If Impact Simulator</h2>
+      </div>
+      <form id="sim-form" class="sim-form">
+        <label>
+          From Product
+          <select id="from-product" required></select>
+        </label>
+        <label>
+          To Product
+          <select id="to-product" required></select>
+        </label>
+        <label>
+          Skill
+          <select id="skill" required></select>
+        </label>
+        <label>
+          Engineers to Reassign
+          <input id="engineers" type="number" min="1" max="6" value="2" required />
+        </label>
+        <button type="submit">Simulate Impact</button>
+      </form>
+
+      <div id="sim-result" class="sim-result empty">
+        Run a scenario to see projected delivery impact and utilization shift.
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
